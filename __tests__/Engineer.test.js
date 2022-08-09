@@ -16,13 +16,10 @@ test('gets github info', () => {
     const engineer = new Engineer('Alex', 1, 'alex@domain.com', 'tvoisyabr');
 
     expect(engineer.github).toEqual(expect.any(String));
-    console.log(engineer.github);
 });
 
 test('creates a role of engineer', () => {
     const engineer = new Engineer('Alex', 1, 'alex@domain.com', 'tvoisyabr');
 
     expect(engineer.getRole()).toBe('Engineer');
-
-    console.log(engineer.getRole());
 });
