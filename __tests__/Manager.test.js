@@ -20,7 +20,7 @@ test('creates an office number', () => {
 });
 
 test('creates a role of manager', () => {
-    const manager = new Manager('Alex');
+    const manager = new Manager('Alex', 2, 'alex@domain.com', '867-5309');
 
     expect(manager.getRole()).toBe('Manager');
 });
