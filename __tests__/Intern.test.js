@@ -16,7 +16,7 @@ test('gets school info', () => {
     const intern = new Intern('Alex', 1, 'alex@domain.com', 'UCF');
 
     expect(intern.school).toEqual(expect.any(String));
-    console.log(intern.github);
+    console.log(intern.school);
 });
 
 test('creates a role of intern', () => {
