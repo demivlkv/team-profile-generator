@@ -12,19 +12,19 @@ test('creates an employee object', () => {
     console.log(`Employee E-mail: ${employee.email}`);
 });
 
-test('gets enployee name', () => {
+test('gets employee name', () => {
     const employee = new Employee('Alex', 1, 'alex@domain.com');
 
     expect(employee.getName()).toEqual(expect.any(String));
 });
 
-test('gets enployee id', () => {
+test('gets employee id', () => {
     const employee = new Employee('Alex', 1, 'alex@domain.com');
 
     expect(employee.getId()).toEqual(expect.any(Number));
 });
 
-test('gets enployee email', () => {
+test('gets employee email', () => {
     const employee = new Employee('Alex', 1, 'alex@domain.com');
 
     expect(employee.getEmail()).toEqual(expect.any(String));
