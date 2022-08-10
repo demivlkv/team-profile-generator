@@ -65,72 +65,108 @@ Add a Team Manager
                     console.log('Please enter a valid number!');
                 }
             }
-        },
-        {
-            type: 'list',
-            name: 'role',
-            message: 'Would you like to add a team member?',
-            choices: ['Engineer', 'Intern', 'Finish Building Team']
         }
     ])
-    .then(employeeData => {
-        console.log(employeeData);
-
-        if (employeeData.role === 'Engineer') {
-            addEngineer();
-        } else if (employeeData.role === 'Intern') {
-            addIntern();
-        } else {
-            return '';
-        }
+    .then(managerData => {
+        console.log(managerData);
     })
 };
 
 // display questions for engineer info
-const addEngineer = () => {
+const addEmployee = () => {
     console.log(`
-===============
-Add an Engineer
-===============
+=================
+Add a Team Member
+=================
 	`);
 	return inquirer.prompt([
         {
+            type: 'list',
+            name: 'role',
+            message: 'Would you like to add a team member?',
+            choices: ['Add Engineer', 'Add Intern', 'Finish Building Team']
+        },
+        {
             type: 'input',
             name: 'name',
-            message: 'What is the name of the engineer?',
-            validate: engineerName => {
-                if (engineerName) {
+            message: 'What is the name of the employee?',
+            validate: employeeName => {
+                if (employeeName) {
                     return true;
                 } else {
                     console.log('Please enter a name!');
                 }
             }
-        }
-    ])
-};
-
-// display questions for intern info
-const addIntern = () => {
-    console.log(`
-=============
-Add an Intern
-=============
-	`);
-	return inquirer.prompt([
+        },
         {
             type: 'input',
-            name: 'name',
-            message: 'What is the name of the intern?',
-            validate: internName => {
-                if (internName) {
+            name: 'id',
+            message: "Please enter the employee's ID number.",
+            validate: employeeId => {
+                if (employeeId) {
                     return true;
                 } else {
-                    console.log('Please enter a name!');
+                    console.log('Please enter a valid ID number!');
                 }
             }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Please enter the e-mail address of the employee.',
+            validate: employeeEmail => {
+                if (employeeEmail) {
+                    return true;
+                } else {
+                    console.log('Please enter an e-mail address!');
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: "Please enter the engineer's GitHub username.",
+            when: (choice) => choice.role === 'Add Engineer',
+            validate: githubInput => {
+                if (githubInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a GitHub username!');
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: "Please enter the intern's school.",
+            when: (choice) => choice.role === 'Add Intern',
+            validate: schoolInput => {
+                if (schoolInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a school!');
+                }
+            }
+        },
+        {
+            type: 'confirm',
+            name: 'addEmployee',
+            message: 'Would you like to add another team member?',
+            default: false
         }
     ])
+    .then(employeeData => {
+        teamArray.push(employeeData);
+        if (employeeData.addEmployee) {
+            return addEmployee();
+        } else {
+            console.log(employeeData);
+        }
+    })
 };
 
 // initialize app
-addManager();
+addManager()
+    .then(employeeData => {
+        return addEmployee(employeeData)
+    });
