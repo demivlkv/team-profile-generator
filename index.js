@@ -94,6 +94,7 @@ Add a Team Member
             type: 'input',
             name: 'name',
             message: 'What is the name of the employee?',
+            when: (choice) => choice.role !== 'Finish Building Team',
             validate: employeeName => {
                 if (employeeName) {
                     return true;
@@ -106,6 +107,7 @@ Add a Team Member
             type: 'input',
             name: 'id',
             message: "Please enter the employee's ID number.",
+            when: (choice) => choice.role !== 'Finish Building Team',
             validate: employeeId => {
                 if (employeeId) {
                     return true;
@@ -118,6 +120,7 @@ Add a Team Member
             type: 'input',
             name: 'email',
             message: 'Please enter the e-mail address of the employee.',
+            when: (choice) => choice.role !== 'Finish Building Team',
             validate: employeeEmail => {
                 if (employeeEmail) {
                     return true;
@@ -156,6 +159,7 @@ Add a Team Member
             type: 'confirm',
             name: 'addEmployee',
             message: 'Would you like to add another team member?',
+            when: (choice) => choice.role !== 'Finish Building Team',
             default: false
         }
     ])

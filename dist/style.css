@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+    
+body {
+    background-color: #f7f7f7;
+    font-family: 'Nunito', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+    
+h1 {
+    background-color: #a44a3f;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #eee;
+    border-radius: 4px;
+    margin: 20px 0;
+    padding: 20px;
+}
