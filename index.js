@@ -1,7 +1,7 @@
 // packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generatePage = require('./src/page-template.js');
+const generatePage = require('./src/generatePage.js');
 
 // get team profiles
 const Manager = require('./lib/Manager.js');
@@ -69,7 +69,7 @@ Add a Team Manager
         }
     ])
     .then(managerData => {
-        // take manager info and push them into teamArray
+        // take manager info & push them into teamArray
         const manager = new Manager (managerData.name, managerData.id, managerData.email, managerData.officeNumber);
         teamArray.push(manager);
         console.log(manager);
@@ -160,7 +160,17 @@ Add a Team Member
         }
     ])
     .then(employeeData => {
-        teamArray.push(employeeData);
+        // take engineer info & push them into teamArray
+        if (employeeData.role === 'Engineer') {
+            const engineer = new Engineer (employeeData.name, employeeData.id, employeeData.email, employeeData.github);
+            teamArray.push(engineer);
+        } else if (employeeData.role === 'Intern') {
+            // take intern info & push them into teamArray
+            const intern = new Intern (employeeData.name, employeeData.id, employeeData.email, employeeData.school);
+            teamArray.push(intern);
+        }
+
+        // 'add another team member?' options
         if (employeeData.addEmployee) {
             return addEmployee(teamArray);
         } else {
@@ -170,7 +180,7 @@ Add a Team Member
 };
 
 // create index.html file
-const createFile = fileName => {
+const createFile = (fileName, teamArray) => {
     return new Promise((resolve, reject) => {
         fs.writeFile('./dist/index.html', fileName, err => {
             if (err) {
@@ -190,12 +200,12 @@ addManager()
     .then(employeeData => {
         return addEmployee(employeeData)
     })
-    .then(data => {
-        console.log(data);
-        return generatePage(data);
+    .then(teamArray => {
+        console.log(teamArray);
+        return generatePage(teamArray);
     })
-    .then(html => {
-        return createFile(html);
+    .then(newFile => {
+        return createFile(newFile);
     })
     .then(writeFileResponse => {
         console.log(writeFileResponse.message);
