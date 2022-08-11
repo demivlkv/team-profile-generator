@@ -1,22 +1,65 @@
 // create manager card
-const generateManager = data => {
-    return `<div class="card">
-    <div class="card-header">
-        Name
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Header</h5>
-        <p class="card-text">
-            Nam aliquam sem et tortor. Dui accumsan sit amet nulla facilisi morbi tempus iaculis. Dui id ornare arcu odio ut sem nulla pharetra diam. Tempus imperdiet nulla malesuada pellentesque. Donec ultrices tincidunt arcu non sodales neque. Adipiscing elit ut aliquam purus sit amet luctus. At risus viverra adipiscing at in. Porta lorem mollis aliquam ut porttitor leo a diam sollicitudin. Et pharetra pharetra massa massa ultricies mi quis.
-        </p>
-    </div>
-</div>
+const generateManager = manager => {
+    if (!manager) {
+        return '';
+    }
+    return `<div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        ${manager.name}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-mug-hot"></i> ${manager.role}</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">${manager.id}</li>
+                                <li class="list-group-item">${manager.email}</li>
+                                <li class="list-group-item">${manager.officeNumber}</li>
+                            </ul>
+                    </div>
+                </div>
     `;
 };
 
 // create engineer card
+const generateEngineer = engineer => {
+    if (!engineer) {
+        return '';
+    }
+    return `<div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        ${engineer.name}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-laptop-code"></i> ${engineer.role}</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">${engineer.id}</li>
+                            <li class="list-group-item">${engineer.email}</li>
+                            <li class="list-group-item">${engineer.github}</li>
+                        </ul>
+                    </div>
+                </div>
+    `;
+};
 
 // create intern card
+const generateIntern = intern => {
+    if (!intern) {
+        return '';
+    }
+    return `<div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        ${intern.name}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fa-solid fa-graduation-cap"></i> ${intern.role}</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">${intern.id}</li>
+                            <li class="list-group-item">${intern.email}</li>
+                            <li class="list-group-item">${intern.school}</li>
+                        </ul>
+                    </div>
+                </div>
+    `;
+};
 
 // create index.html page
 const generatePage = data => {
@@ -39,7 +82,15 @@ const generatePage = data => {
     
                 <h1>My Team</h1>
 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+
                 ${generateManager(data)}
+                ${generateEngineer(data)}
+                ${generateIntern(data)}
     
             </div>
         </div>

@@ -204,9 +204,9 @@ addManager()
     .then(employeeData => {
         return addEmployee(employeeData)
     })
-    .then(teamArray => {
-        console.log(teamArray);
-        return generatePage(teamArray);
+    .then(data => {
+        console.log(data);
+        return generatePage(data);
     })
     .then(newFile => {
         return createFile(newFile);
