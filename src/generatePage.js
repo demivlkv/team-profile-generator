@@ -2,7 +2,7 @@
 const generateCards = data => {
     cardArray = [];
 
-    // call for function to respective employee roles
+    // calls functions to respective employee roles
     for (let i = 0; i < data.length; i++) {
         let employee = data[i];
         let role = employee.getRole();
@@ -21,7 +21,7 @@ const generateCards = data => {
         }
     }
 
-    // take all employee cards & join into strings
+    // take all employee cards & join strings
     const employeeInfo = cardArray.join('');
 
     // display all cards in generatePage()
@@ -34,19 +34,21 @@ const generateManager = manager => {
     if (!manager) {
         return '';
     }
-    return `<div class="card" style="width: 18rem;">
+    return `<div class="col-md-4">
+                <div class="card">
                     <div class="card-header">
                         <h2>${manager.name}</h2>
+                        <h5 class="card-title"><i class="fa-solid fa-mug-hot"></i> ${manager.getRole()}</h5>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fa-solid fa-mug-hot"></i> ${manager.getRole()}</h5>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">ID: ${manager.id}</li>
-                                <li class="list-group-item">E-mail: <a href="mailto:${manager.email}">${manager.email}</a></li>
-                                <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
-                            </ul>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">ID: ${manager.id}</li>
+                            <li class="list-group-item">E-mail: <a href="mailto:${manager.email}">${manager.email}</a></li>
+                            <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
     `;
 };
 
@@ -56,12 +58,13 @@ const generateEngineer = engineer => {
         return '';
     }
     return `
-                <div class="card" style="width: 18rem;">
+            <div class="col-md-4">
+                <div class="card">
                     <div class="card-header">
                         <h2>${engineer.name}</h2>
+                        <h5 class="card-title"><i class="fa-solid fa-laptop-code"></i> ${engineer.getRole()}</h5>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fa-solid fa-laptop-code"></i> ${engineer.getRole()}</h5>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${engineer.id}</li>
                             <li class="list-group-item">E-mail: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
@@ -69,6 +72,7 @@ const generateEngineer = engineer => {
                         </ul>
                     </div>
                 </div>
+            </div>
     `;
 };
 
@@ -78,12 +82,13 @@ const generateIntern = intern => {
         return '';
     }
     return `
-                <div class="card" style="width: 18rem;">
+            <div class="col-md-4">
+                <div class="card">
                     <div class="card-header">
                         <h2>${intern.name}</h2>
+                        <h5 class="card-title"><i class="fa-solid fa-graduation-cap"></i> ${intern.getRole()}</h5>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fa-solid fa-graduation-cap"></i> ${intern.getRole()}</h5>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${intern.id}</li>
                             <li class="list-group-item">E-mail: <a href="mailto:${intern.email}">${intern.email}</a></li>
@@ -91,6 +96,7 @@ const generateIntern = intern => {
                         </ul>
                     </div>
                 </div>
+            </div>
     `;
 };
 
@@ -110,22 +116,25 @@ const generatePage = data => {
 <body>
     
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
     
-                <h1>My Team</h1>
+                <h1 class="display-4">My Team</h1>
 
             </div>
         </div>
 
-        <div class="row">
-            <div class="col">
+        <div class="row justify-content-center">
 
-                ${data}
+            ${data}
 
-            </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </body>
 </html>
     `;

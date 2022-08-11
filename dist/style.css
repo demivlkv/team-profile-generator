@@ -7,15 +7,40 @@ body {
     font-family: 'Nunito', Helvetica, Arial, sans-serif;
     font-size: 1em;
 }
+
+.container-fluid {
+    padding: 0;
+}
+
+.main {
+    width: 70%;
+    margin: 0 auto;
+}
     
 h1 {
-    background-color: #a44a3f;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 36px;
     text-align: center;
     letter-spacing: 1px;
-    color: #eee;
-    border-radius: 4px;
-    margin: 20px 0;
+}
+
+/* employee cards formatting */
+
+div.card {
+    margin: 15px 0;
+}
+
+div.card-header {
     padding: 20px;
+}
+
+.card-header h2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 28px;
+}
+
+h5.card-title {
+    font-size: 18px;
+    color: #999;
+    margin: 0;
 }
