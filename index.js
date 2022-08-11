@@ -160,7 +160,7 @@ Add a Team Member
             name: 'addEmployee',
             message: 'Would you like to add another team member?',
             when: (choice) => choice.role !== 'Finish Building Team',
-            default: false
+            default: true
         }
     ])
     .then(employeeData => {
@@ -174,7 +174,7 @@ Add a Team Member
             teamArray.push(intern);
         }
 
-        // 'add another team member?' options
+        // 'add another team member?' menu
         if (employeeData.addEmployee) {
             return addEmployee(teamArray);
         } else {
