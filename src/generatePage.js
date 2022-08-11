@@ -41,7 +41,7 @@ const generateManager = manager => {
                         <h5 class="card-title"><i class="fa-solid fa-mug-hot"></i> ${manager.getRole()}</h5>
                     </div>
                     <div class="card-body">
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group">
                             <li class="list-group-item">ID: ${manager.id}</li>
                             <li class="list-group-item">E-mail: <a href="mailto:${manager.email}">${manager.email}</a></li>
                             <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
@@ -65,7 +65,7 @@ const generateEngineer = engineer => {
                         <h5 class="card-title"><i class="fa-solid fa-laptop-code"></i> ${engineer.getRole()}</h5>
                     </div>
                     <div class="card-body">
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group">
                             <li class="list-group-item">ID: ${engineer.id}</li>
                             <li class="list-group-item">E-mail: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
                             <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></li>
@@ -89,7 +89,7 @@ const generateIntern = intern => {
                         <h5 class="card-title"><i class="fa-solid fa-graduation-cap"></i> ${intern.getRole()}</h5>
                     </div>
                     <div class="card-body">
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group">
                             <li class="list-group-item">ID: ${intern.id}</li>
                             <li class="list-group-item">E-mail: <a href="mailto:${intern.email}">${intern.email}</a></li>
                             <li class="list-group-item">School: ${intern.school}</li>
@@ -110,6 +110,9 @@ const generatePage = data => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/c5a64ca061.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <title>Team Profile</title>
 </head>

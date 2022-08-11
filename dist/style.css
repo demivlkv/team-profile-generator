@@ -3,8 +3,8 @@
 }
     
 body {
-    background-color: #f7f7f7;
-    font-family: 'Nunito', Helvetica, Arial, sans-serif;
+    background-color: #fefefe;
+    font-family: 'Karla', Helvetica, Arial, sans-serif;
     font-size: 1em;
 }
 
@@ -12,35 +12,59 @@ body {
     padding: 0;
 }
 
-.main {
-    width: 70%;
-    margin: 0 auto;
+.jumbotron {
+    background-color: #b0dad9;
 }
     
 h1 {
-    font-family: Helvetica, Arial, sans-serif;
     font-size: 36px;
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 5px;
+    font-weight: 300;
 }
 
 /* employee cards formatting */
 
+.main {
+    width: 70%;
+    margin: 0 auto;
+}
+
 div.card {
     margin: 15px 0;
+    -webkit-box-shadow: 6px 6px 9px -4px rgba(0,0,0,0.6); 
+    box-shadow: 6px 6px 9px -4px rgba(0,0,0,0.6);
+}
+
+div.card-body {
+    background-color: #f7f7f7;
 }
 
 div.card-header {
+    background: linear-gradient(#92ddda, #eee);
     padding: 20px;
+    border-bottom: 1px solid #ddd;
 }
 
 .card-header h2 {
-    font-family: Helvetica, Arial, sans-serif;
     font-size: 28px;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 h5.card-title {
     font-size: 18px;
-    color: #999;
+    color: #707070;
     margin: 0;
+}
+
+a:link, a:visited {
+    color: #3fada8;
+    text-decoration: none;
+    transition: all 0.5s ease 0s;
+}
+
+a:hover {
+    color: #92ddda;
+    text-decoration: none;
 }
