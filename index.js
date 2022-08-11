@@ -1,7 +1,7 @@
 // packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generatePage = require('./src/generatePage.js');
+const generateCards = require('./src/generatePage.js');
 
 // get team profiles
 const Manager = require('./lib/Manager.js');
@@ -206,7 +206,7 @@ addManager()
     })
     .then(data => {
         console.log(data);
-        return generatePage(data);
+        return generateCards(data);
     })
     .then(newFile => {
         return createFile(newFile);
