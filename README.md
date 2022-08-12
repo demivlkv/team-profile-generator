@@ -1,17 +1,19 @@
 # Project 10: Object-Oriented Programming Challenge
 
 ## Team Profile Generator
-[![License: No License](https://img.shields.io/badge/License-No_License-red)](https://choosealicense.com/no-permission/)
 
 ## Description
 This project is a Node.js command-line application that generates a team profile. It allows users to enter the general information about their employees of a software engineering team. The application would then take the input to generate an HTML page that displays a summary of each team member.
+
+The HTML output is pictured below. Click [here](/../main/dist/index.html) to view the `index.html` file.
+
+![screenshot.png](/../main/assets/images/screenshot.png)
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Tests](#tests)
-- [License](#license)
 - [Questions](#questions)
 
 ## Installation
@@ -38,7 +40,6 @@ The newly-generated `index.html` file will be found in the `dist` folder that go
 A video demonstration for this application can be found [here](https://youtu.be/Gt11yLpwtUE).
 
 ![demo.gif](/../main/assets/images/demo.gif)
-![screenshot.png](/../main/assets/images/screenshot.png)
 
 ## Contributing
 Thank you for your interest in contributing to this application, but I am not accepting contributions at this time.
@@ -48,9 +49,6 @@ Enter the following command in terminal to run tests for this application:
 ```
 npm run test
 ```
-
-## License
-This application is protected under the No License exclusive copyright by default. Please visit this [link](https://choosealicense.com/no-permission/) for additional information.
 
 ## Questions
 For any questions about this repository, please contact me at [demi.h@me.com](mailto:demi.h@me.com).
