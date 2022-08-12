@@ -15,11 +15,16 @@ This project is a Node.js command-line application that generates a team profile
 - [Questions](#questions)
 
 ## Installation
-To install this application, `git clone` this repository, or download the `.zip` file in the dropdown after clicking the green ‘Code’ button at the top of this repository—as long as it is in your local branch.
-
-Using the code editor of your choice, you need to install **Inquirer.js** node package by entering `npm inquirer` in the command line of terminal. Documentation for **Inquirer** can be accessed [here](https://www.npmjs.com/package/inquirer).
-
-In addition to **Inquirer.js**, you must install **Jest** node package to run specific tests. To install, enter `npm i jest` in the command line of terminal. For more information, please refer to their [documentation](https://jestjs.io/docs/getting-started).
+1. To install this application, `git clone` this repository, or download the `.zip` file in the dropdown after clicking the green ‘Code’ button at the top of this repository—as long as it is in your local branch.
+2. Ensure Node.js is installed.
+3. Using the code editor of your choice, you need to install [Inquirer.js](https://www.npmjs.com/package/inquirer) node package by entering the following in the command line of terminal:
+```
+npm inquirer
+```
+4. In addition to **Inquirer.js**, you must install [Jest](https://jestjs.io/docs/getting-started) node package to run specific tests:
+```
+npm i jest
+```
 
 ## Usage
 Ensure that you are in the root directory in order for this application to run successfully. This application will initialize by running this command line in terminal:
@@ -30,9 +35,9 @@ The **Inquirer** package for Node.js collects input regarding your team within t
 
 The newly-generated `index.html` file will be found in the `dist` folder that goes hand-in-hand with the `style.css` file already present there.
 
-A video demonstration for this application can be found [here](https://www.youtube.com/watch?v=7b_bRehAL90).
+A video demonstration for this application can be found [here](https://youtu.be/Gt11yLpwtUE).
 
-![demi.gif](/../main/assets/images/demo.gif)
+![demo.gif](/../main/assets/images/demo.gif)
 ![screenshot.png](/../main/assets/images/screenshot.png)
 
 ## Contributing
