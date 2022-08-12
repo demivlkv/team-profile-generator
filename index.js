@@ -72,7 +72,6 @@ Add a Team Manager
         // take manager info & push them into teamArray
         const manager = new Manager (managerData.name, managerData.id, managerData.email, managerData.officeNumber);
         teamArray.push(manager);
-        console.log(manager);
     })
 };
 

@@ -112,7 +112,7 @@ const generatePage = data => {
     <script src="https://kit.fontawesome.com/c5a64ca061.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <title>Team Profile</title>
 </head>
@@ -127,7 +127,7 @@ const generatePage = data => {
             </div>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center main">
 
             ${data}
 

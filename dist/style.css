@@ -6,6 +6,7 @@ body {
     background-color: #fefefe;
     font-family: 'Karla', Helvetica, Arial, sans-serif;
     font-size: 1em;
+    font-weight: 300;
 }
 
 .container-fluid {
@@ -20,7 +21,7 @@ h1 {
     font-size: 36px;
     text-align: center;
     letter-spacing: 5px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* employee cards formatting */
@@ -48,8 +49,7 @@ div.card-header {
 
 .card-header h2 {
     font-size: 28px;
-    letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 h5.card-title {
