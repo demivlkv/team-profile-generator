@@ -17,7 +17,7 @@ The HTML output can be viewed at this [link](https://demivlkv.github.io/team-pro
 - [Questions](#questions)
 
 ## Installation
-1. To install this application, `git clone` this repository, or download the `.zip` file in the dropdown after clicking the green ‘Code’ button at the top of this repository—as long as it is in your local branch.
+1. To install this application, `git clone` this repository, or download the `.zip` file in the dropdown after clicking the ‘Code’ button at the top of this repository—as long as it is in your local branch.
 2. Ensure Node.js is installed.
 3. Using the code editor of your choice, you need to install [Inquirer.js](https://www.npmjs.com/package/inquirer) node package by entering the following in the command line of terminal:
 ```
